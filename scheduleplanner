@@ -22,6 +22,13 @@ class Semester{
     set courses(c){
         this._courses = [c];
     }
+    add_course(new_course){
+        this._courses.push(new_course)
+    }
+    delete_course(course_name){
+        index = this._courses.findIndex(course_name)
+	this._courses.splice(index, index)
+    }
 }
 
 class Course{
@@ -52,6 +59,12 @@ console.log(course.units);
 
 var semester = new Semester("Fall", 2019, [course, new Course("CS61a")]);
 console.log(semester.year);
+console.log(semester.courses);
+
+semester.add_course(new Course("Math 53"));
+console.log(semester.courses);
+
+semester.delete_course(course);
 console.log(semester.courses);
 
 
