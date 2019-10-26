@@ -22,6 +22,13 @@ class Semester{
     set courses(c){
         this._courses = [c];
     }
+    add_course(new_course){
+        this._courses.push(new_course)
+    }
+    delete_course(course_name){
+        var index = this._courses.indexOf(course_name)
+	this._courses.splice(index, index+1)
+    }
 }
 
 class Course{
@@ -46,13 +53,5 @@ class Course{
     }
 
 }
-var course = new Course("EE16a");
-console.log(course.name);
-console.log(course.units);
 
-var semester = new Semester("Fall", 2019, [course, new Course("CS61a")]);
-console.log(semester.year);
-console.log(semester.courses);
-
-
-
+var RequirementsDict = {"Math 1A": false, "Math 1B": false, "Math 53": false, "CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design Course": false, "EECS Upper Division 1": false, "EECS Upper Division 2": false, "EECS Upper Division 3": false};
