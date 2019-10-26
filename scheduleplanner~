@@ -1,0 +1,58 @@
+class Semester{
+    constructor(season, year, courses = []){
+        this._season = season;
+        this._year = year;
+        this._courses = courses;
+    }
+    get season(){
+    	return this._season;
+    }
+    set season(s){
+        this._season = s;
+    }
+    get year(){
+    	return this._year;
+    }
+    set year(y){
+        this._year = y;
+    }
+    get courses(){
+    	return this._courses.toString();
+    }
+    set courses(c){
+        this._courses = [c];
+    }
+}
+
+class Course{
+    constructor(name, units=4){
+        this._name = name;
+        this._units = units;
+    }
+    get name(){
+    	return this._name;
+    }
+    set name(n){
+        this._name = n;
+    }
+    get units(){
+    	return this._units;
+    }
+    set units(u){
+        this._units = u;
+    }
+    toString(){
+        return this._name
+    }
+
+}
+var course = new Course("EE16a");
+console.log(course.name);
+console.log(course.units);
+
+var semester = new Semester("Fall", 2019, [course, new Course("EE16a")]);
+console.log(semester.year);
+console.log(semester.courses);
+
+
+
