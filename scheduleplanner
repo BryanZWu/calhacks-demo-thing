@@ -26,8 +26,8 @@ class Semester{
         this._courses.push(new_course)
     }
     delete_course(course_name){
-        index = this._courses.findIndex(course_name)
-	this._courses.splice(index, index)
+        var index = this._courses.indexOf(course_name)
+	this._courses.splice(index, index+1)
     }
 }
 
@@ -53,19 +53,7 @@ class Course{
     }
 
 }
-var course = new Course("EE16a");
-console.log(course.name);
-console.log(course.units);
 
-var semester = new Semester("Fall", 2019, [course, new Course("CS61a")]);
-console.log(semester.year);
-console.log(semester.courses);
-
-semester.add_course(new Course("Math 53"));
-console.log(semester.courses);
-
-semester.delete_course(course);
-console.log(semester.courses);
 
 
 
