@@ -1,0 +1,104 @@
+class Semester{
+    constructor(season, year, courses = []){
+        this._season = season;
+        this._year = year;
+        this._courses = courses;
+    }
+    get season(){
+    	return this._season;
+    }
+    set season(s){
+        this._season = s;
+    }
+    get year(){
+    	return this._year;
+    }
+    set year(y){
+        this._year = y;
+    }
+    get courses(){
+    	return this._courses.toString();
+    }
+    set courses(c){
+        this._courses = [c];
+    }
+    add_course(new_course){
+        this._courses.push(new_course)
+    }
+    delete_course(course_name){
+        var index = this._courses.indexOf(course_name)
+	this._courses.splice(index, index+1)
+    }
+}
+
+class Course{
+    constructor(name, units=4, semester=None){
+        this._name = name;
+        this._units = units;
+	this._semester = semester
+    }
+    get name(){
+    	return this._name;
+    }
+    set name(n){
+        this._name = n;
+    }
+    get units(){
+    	return this._units;
+    }
+    set units(u){
+        this._units = u;
+    }
+    get semester(){
+    	return this._semester;
+    }
+    set semester(u){
+        this._semester = semester;
+    }
+    toString(){
+        return this._name
+    }
+
+}
+
+class Requirements{
+    constructor(name, requirements = {}){
+        this._name = name;
+	this._requirements = requirements;
+    }
+    get requirements(){
+    	return this._requirements.toString();
+    }
+    set requirements(d){
+        this._requirements = d
+    }
+}
+
+class University_req extends Requirements{
+    constructor(){
+        super({"Math 1A": false, "Math 1B": false, "Math 53": false})
+    }	
+}
+
+class EECS_req extends University_req{
+    constructor(){
+        super()
+	var EECS_dict = {"CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design 1": false, "EECS Design 1": false, "EECS Design 1": false, "EECS Design 1": false}
+        for (key,value) in EECS_dict{
+	    this.requirements[key] = value
+        }
+    }
+}
+
+const keys1 = Object.keys(Requirements);
+console.log(keys1)
+const keys2 = Object.keys(University_req);
+console.log(keys2)
+const keys3 = Object.keys(EECS_req);
+console.log(keys3)
+
+
+
+
+
+
