@@ -54,6 +54,4 @@ class Course{
 
 }
 
-
-
-
+var RequirementsDict = {"Math 1A": false, "Math 1B": false, "Math 53": false, "CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design Course": false, "EECS Upper Division 1": false, "EECS Upper Division 2": false, "EECS Upper Division 3": false};
