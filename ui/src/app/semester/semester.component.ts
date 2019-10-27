@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import {Input} from '@angular/core/';
 
 @Component({
-  selector: 'app-semester',
-  templateUrl: './semester.component.html',
-  styleUrls: ['./semester.component.css']
+  selector: 'app-Semester',
+  templateUrl: './Semester.component.html',
+  styleUrls: ['./Semester.component.css']
 })
 export class SemesterComponent implements OnInit {
-  season = "Fall"
-  year = 2019
-  constructor() { }
+  @Input() season: string;
+  @Input() year: number; 
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
