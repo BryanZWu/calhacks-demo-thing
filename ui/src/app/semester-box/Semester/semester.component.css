@@ -1,24 +1,23 @@
-#header{
+header{
   border-style: dashed;
   border-width: medium;
+  float: left;
+  display: inline;
 }
-table, tr, td {
+table {
   border: 1px solid black;
-  width: 373px;
-  height: 233px;
-  overflow-y: scroll;
+  width: 30%;
+  height: 200px;
 }
 p{
-  font-size: 20px
+  font-size: 20px;
 }
-.button {
-  display: inline;
+button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
+  font-size: 10px;
 }
