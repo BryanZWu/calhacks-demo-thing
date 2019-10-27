@@ -2,9 +2,12 @@
   <div id = "schedule">
     <p>here is the schedule</p>
     <app-semester-box [semesterList] = "semestList"> </app-semester-box>
+    <!-- but what exactly do those square brackets do? I think it's like
+  continuously updated with whatever the current semestList or something-->
   </div>
   <div id = "requirements">
-  <p>this goes on the right<br>
-  this goes on the right</p>
+  <p>this goes on the right
+    <app-degree-requirements></app-degree-requirements>
+  </p>
   </div>
 </div>
