@@ -30,11 +30,11 @@ class Semester{
         this._courses = [c];
     }
     add_course(new_course){
-        this._courses.push(new_course)
+        this._courses.push(new_course);
     }
     delete_course(course_name){
-        var index = this._courses.indexOf(course_name)
-	this._courses.splice(index, index+1)
+        var index = this._courses.indexOf(course_name);
+	this._courses.splice(index, index+1);
     }
 }
 
@@ -95,7 +95,7 @@ class Requirements{
 
 class University_req extends Requirements{
     constructor(){
-        super({"Math 1A": math1a, "Math 1B": math1b, "Math 53": math53})
+        super({"Math 1A": math1a, "Math 1B": math1b, "Math 53": math53});
     }	
 }
 
@@ -104,7 +104,7 @@ class EECS_req extends University_req{
         super();
 	var EECS_dict = {"CS 70": cs70, "Physics 7A or Physics 5A": physicsa, "Physics 7B or Physics 5B+5BL": physicsb, "Natural Science Other": natsci, "EECS Design 1": eecsdesign1, "EECS Design 2": eecsdesign2, "EECS Design 3": eecsdesign3, "EECS Design 4": eecsdesign4}
         for (var key in EECS_dict){
-	    this.requirements[key] = EECS_dict[key]
+	    this.requirements[key] = EECS_dict[key];
         }
     }
 }
@@ -119,4 +119,11 @@ var semester5 = new Semester("Fall", 2021, 5)
 var semester6 = new Semester("Spring", 2022, 6)
 var semester7 = new Semester("Fall", 2022, 7)
 var semester8 = new Semester("Spring", 2023, 8)
+
+var math_arr = [];
+for (var key in new EECS_req().requirements){
+	    math_arr += [key];
+        }
+math_arr.splice(3,7);
+console.log(math_arr);
 
