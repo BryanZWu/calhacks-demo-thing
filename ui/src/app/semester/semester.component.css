@@ -1,8 +1,5 @@
 header{
-  border-style: dashed;
-  border-width: medium;
-  float: left;
-  display: inline;
+ display: inline-block;
 }
 table {
   border: 1px solid black;
@@ -16,8 +13,9 @@ button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 0px 5px;
   text-align: center;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 20px;
+  display: inline-block;
 }
