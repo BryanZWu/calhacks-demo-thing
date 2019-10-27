@@ -2,7 +2,7 @@
   border-style: dashed;
   border-width: medium;
 }
-table, tr, td {
+table {
   border: 1px solid black;
   width: 373px;
   height: 233px;
