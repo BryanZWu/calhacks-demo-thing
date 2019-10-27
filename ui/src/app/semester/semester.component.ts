@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./semester.component.css']
 })
 export class SemesterComponent implements OnInit {
-
+  season = "Fall"
+  year = 2019
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,7 @@
+#header{
+  border-style: dashed;
+  border-width: medium;
+}
+table, tr, td {
+  border: 1px solid black;
+}
