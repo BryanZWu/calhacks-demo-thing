@@ -62,8 +62,7 @@ class Course{
 }
 
 class Requirements{
-    constructor(name, requirements = {}){
-        this._name = name;
+    constructor(requirements = {}){
 	this._requirements = requirements;
     }
     get requirements(){
@@ -82,21 +81,18 @@ class University_req extends Requirements{
 
 class EECS_req extends University_req{
     constructor(){
-        super()
-	var EECS_dict = {"CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design 1": false, "EECS Design 1": false, "EECS Design 1": false, "EECS Design 1": false}
-        for (key,value) in EECS_dict{
-	    this.requirements[key] = value
+        super();
+	var EECS_dict = {"CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design 1": false, "EECS Design 2": false, "EECS Design 3": false, "EECS Design 4": false}
+        for (var key in EECS_dict){
+	    this.requirements[key] = EECS_dict[key]
         }
     }
 }
 
-const keys1 = Object.keys(Requirements);
-console.log(keys1)
-const keys2 = Object.keys(University_req);
-console.log(keys2)
-const keys3 = Object.keys(EECS_req);
-console.log(keys3)
 
+var requirement1 = new Requirements()
+var keys = Object.keys(requirement1.requirements)
+console.log(keys)
 
 
 
