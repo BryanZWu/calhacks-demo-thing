@@ -109,7 +109,7 @@ class EECS_req extends University_req{
     }
 }
 
-var course_list = [math1a, math1b, math53, cs70, physicsa, physicsb]
+var course_list = [math1a, math1b, math53, cs70, physicsa, physicsb, natsci, eecsdesign1, eecsdesign2, eecsdesign3, eecsdesign4]
 
 var semester1 = new Semester("Fall", 2019, 1)
 var semester2 = new Semester("Spring", 2020, 2)
