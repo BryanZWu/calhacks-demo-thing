@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SemesterComponent } from './semester/semester.component';
+import { SemesterBoxComponent } from './semester-box/semester-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SemesterComponent
+    SemesterComponent,
+    SemesterBoxComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

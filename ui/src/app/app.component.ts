@@ -8,6 +8,6 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  semesterList = [[2019, "Spring"], [2019, "Fall"], [2020, 'Spring'],[2020, "Fall"], [2021, "Spring"], [2021, "Fall"],[2022, "Spring"], [2022, "Fall"],]
+  semestList = [[2019, "Spring"], [2019, "Fall"], [2020, 'Spring'],[2020, "Fall"], [2021, "Spring"], [2021, "Fall"],[2022, "Spring"], [2022, "Fall"],]
   title = 'ui';
 }

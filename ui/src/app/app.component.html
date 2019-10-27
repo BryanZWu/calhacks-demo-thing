@@ -1,10 +1,7 @@
 <div id = 'body'>
   <div id = "schedule">
     <p>here is the schedule</p>
-    <div id = 'semesters' *ngFor="let semester of semesterList">
-      <p>{{semester}}</p>
-      <app-Semester year = {{semester[0]}} season = {{semester[1]}} ></app-Semester>
-    </div>
+    <app-semester-box [semesterList] = "semestList"> </app-semester-box>
   </div>
   <div id = "requirements">
   <p>this goes on the right<br>
