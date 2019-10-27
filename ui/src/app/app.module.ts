@@ -7,7 +7,7 @@ import { SemesterComponent } from './semester-box/semester/semester.component';
 import { SemesterBoxComponent } from './semester-box/semester-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DegreeRequirementsComponent } from './degree-requirements/degree-requirements.component';
-import { RequirementCategoryComponent } from './requirement-category/requirement-category.component';
+import { RequirementCategoryComponent } from './degree-requirements/requirement-category/requirement-category.component';
 
 @NgModule({
   declarations: [
