@@ -1,0 +1,18 @@
+#body{
+  overflow: visible;
+}
+#schedule {
+    float: left;
+    width: 60%;
+    background: White;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#requirements {
+    float: left;
+    width: 40%;
+    background: White;
+    height: 100%;
+    overflow: hidden;
+}
