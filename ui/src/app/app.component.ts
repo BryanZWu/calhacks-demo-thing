@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SemesterComponent} from './semester/semester.component'
+import {SemesterComponent} from './semester-box/semester/semester.component'
 import { NgModule } from '@angular/core';
 
 @Component({
