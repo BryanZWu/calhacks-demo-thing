@@ -39,7 +39,7 @@ class Semester{
 }
 
 class Course{
-    constructor(name, units=4, semester=None){
+    constructor(name, units=4, semester=null){
         this._name = name;
         this._units = units;
 	this._semester = semester
@@ -68,6 +68,19 @@ class Course{
 
 }
 
+var math1a = new Course("Math 1A");
+var math1b = new Course("Math 1B");
+var math53 = new Course("Math 53");
+var physicsa = new Course("Physics 7A or 5A");
+var physicsb = new Course("Physics 7B or 5B+5BL");
+var cs70 = new Course("CS 70");
+var natsci = new Course("Natural Science Other");
+var eecsdesign1 = new Course("EECS Design 1");
+var eecsdesign2 = new Course("EECS Design 2");
+var eecsdesign3 = new Course("EECS Design 3");
+var eecsdesign4 = new Course("EECS Design 4");
+ 
+
 class Requirements{
     constructor(requirements = {}){
 	this._requirements = requirements;
@@ -82,39 +95,28 @@ class Requirements{
 
 class University_req extends Requirements{
     constructor(){
-        super({"Math 1A": false, "Math 1B": false, "Math 53": false})
+        super({"Math 1A": math1a, "Math 1B": math1b, "Math 53": math53})
     }	
 }
 
 class EECS_req extends University_req{
     constructor(){
         super();
-	var EECS_dict = {"CS 70": false, "Physics 7A or Physics 5A": false, "Physics 7B or Physics 5B+5BL": false, "Natural Science Other": false, "EECS Design 1": false, "EECS Design 2": false, "EECS Design 3": false, "EECS Design 4": false}
+	var EECS_dict = {"CS 70": cs70, "Physics 7A or Physics 5A": physicsa, "Physics 7B or Physics 5B+5BL": physicsb, "Natural Science Other": natsci, "EECS Design 1": eecsdesign1, "EECS Design 2": eecsdesign2, "EECS Design 3": eecsdesign3, "EECS Design 4": eecsdesign4}
         for (var key in EECS_dict){
 	    this.requirements[key] = EECS_dict[key]
         }
     }
 }
 
-var course_list = 1
+var course_list = [math1a, math1b, math53, cs70, physicsa, physicsb]
 
 var semester1 = new Semester("Fall", 2019, 1)
-console.log(semester1)
 var semester2 = new Semester("Spring", 2020, 2)
-console.log(semester2)
 var semester3 = new Semester("Fall", 2020, 3)
-console.log(semester3)
 var semester4 = new Semester("Spring", 2021, 4)
-console.log(semester4)
 var semester5 = new Semester("Fall", 2021, 5)
-console.log(semester5)
 var semester6 = new Semester("Spring", 2022, 6)
-console.log(semester6)
 var semester7 = new Semester("Fall", 2022, 7)
-console.log(semester7)
 var semester8 = new Semester("Spring", 2023, 8)
-console.log(semester8)
-
-
-
 
