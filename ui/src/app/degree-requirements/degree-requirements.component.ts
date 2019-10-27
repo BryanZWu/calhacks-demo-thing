@@ -7,9 +7,8 @@ import {Input} from '@angular/core/'
   styleUrls: ['./degree-requirements.component.css']
 })
 export class DegreeRequirementsComponent implements OnInit {
-
-  /** for now it's just an array of strings for the reqs.
-  We'll take in objects later**/
+  @Input() categoryList: Array<Array<[string, Array<string>]>>
+  /** these will have to be in the same order. **/
   constructor() { }
 
   ngOnInit() {

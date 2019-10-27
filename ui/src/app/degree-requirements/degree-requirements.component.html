@@ -1,4 +1,4 @@
 <h1>here's the component for ALL degree requirements</h1>
 <div id = 'categories' *ngFor="let category of categoryList">
-  <app-requirement-category>title = ""  requirements = [] </app-requirement-category>
+  <app-requirement-category [title] = category[0]  [requirements] = category[1]> </app-requirement-category>
 </div>
